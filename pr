@@ -1,0 +1,43 @@
+from turtle import Turtle
+
+a = Turtle()
+a.color('green')
+a.width(5)
+a.speed(1)
+
+print("Що намалювати?")
+print("1-квадрат")
+print("2-трикутник")
+print("3-багатокутник")
+
+choice = input("? \n")
+
+if choice == "1":
+    side = int(input("Введіть сторону квадрата: \n"))
+    for i in range(4):
+        a.forward(side)
+        a.left(90)
+
+    square(side)
+    a.screen.mainloop()
+
+elif choice == "2":
+    side = int(input("Введіть сторону трикутника: \n"))
+    for i in range(3):
+        a.forward(side)
+        a.left(120)
+
+    triangle(side)
+    a.screen.mainloop()
+
+elif choice =="3":
+    side = int(input("Введіть сторону багатокутника: \n"))
+    for i in range(8):
+        a.forward(side)
+        a.left(45)
+
+    triangle(side)
+    a.screen.mainloop()
+    
+else:
+    print("такого варіанту не існує")
